@@ -24,7 +24,6 @@
   <p>
     <a href="#-evaluator-demo-account"><b>🔑 Demo Credentials</b></a> &nbsp;•&nbsp;
     <a href="PROBLEM_STATEMENT_AND_PITCH.md"><b>📄 Pitch Document</b></a> &nbsp;•&nbsp;
-    <a href="SUBMISSION_KIT.md"><b>🏆 Submission Kit</b></a> &nbsp;•&nbsp;
     <a href="SMARTRUPEE_PRODUCT_AND_API_DOCS.md"><b>📘 API Reference</b></a>
   </p>
 
@@ -150,7 +149,6 @@ SmartRupee decouples **pure deterministic financial compute** from **AI natural 
 nxtwave-hackthon/
 ├── README.md                          # Main Repository Overview & Setup Guide
 ├── PROBLEM_STATEMENT_AND_PITCH.md     # Official Hackathon Pitch Document
-├── SUBMISSION_KIT.md                  # Pre-filled official submission form responses
 ├── SMARTRUPEE_PRODUCT_AND_API_DOCS.md # Product Overview & API Reference
 ├── backend/                           # FastAPI Python Backend
 │   ├── app/
