@@ -11,13 +11,28 @@ settings = get_settings()
 app = FastAPI(
     title="SmartRupee API",
     description="Agentic 3-Stage Personal Finance Engine for Gig Workers in India",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url=settings.docs_url,
+    redoc_url=settings.redoc_url
 )
 
-# Configure CORS for local development and production deployments
+# Configure CORS for local development and production deployments (including Vercel)
+origins = [
+    "https://smart-rupee.vercel.app",
+    "https://smart-rupee.vercel.app/",
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
+    "http://localhost:5176",
+    "http://localhost:3000",
+    "http://127.0.0.1:5173",
+    "http://127.0.0.1:8000",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

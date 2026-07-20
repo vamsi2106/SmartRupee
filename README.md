@@ -13,15 +13,16 @@
   </p>
 
   <p>
+    <a href="https://smart-rupee.vercel.app/"><img src="https://img.shields.io/badge/Live_Deployment-smart--rupee.vercel.app-emerald?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Deployment"></a>
     <a href="https://forms.ccbp.in/acad-online-hackathon-project-submission"><img src="https://img.shields.io/badge/Hackathon-NxtWave_Idea2Impact_2026-brightgreen?style=for-the-badge&logo=google" alt="Hackathon"></a>
     <a href="#-theme--problem-alignment"><img src="https://img.shields.io/badge/Theme-1._Sustainability_%26_Social_Impact-blue?style=for-the-badge" alt="Theme"></a>
     <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/Backend-FastAPI_3.11+-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"></a>
     <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/Frontend-React_18_Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"></a>
     <a href="https://aistudio.google.com/"><img src="https://img.shields.io/badge/AI_Engine-Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini"></a>
-    <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"></a>
   </p>
 
   <p>
+    <a href="https://smart-rupee.vercel.app/"><b>🌐 Live Web App</b></a> &nbsp;•&nbsp;
     <a href="#-evaluator-demo-account"><b>🔑 Demo Credentials</b></a> &nbsp;•&nbsp;
     <a href="PROBLEM_STATEMENT_AND_PITCH.md"><b>📄 Pitch Document</b></a> &nbsp;•&nbsp;
     <a href="SMARTRUPEE_PRODUCT_AND_API_DOCS.md"><b>📘 API Reference</b></a>

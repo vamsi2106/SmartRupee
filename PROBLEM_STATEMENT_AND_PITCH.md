@@ -16,6 +16,7 @@ Standard personal finance tools assume a steady monthly salary and recommend sta
 **SmartRupee** solves this systemic issue through an **Agentic 3-Stage Financial Advisory Engine** powered by **Google Gemini AI**. It combines deterministic volatility mathematics with AI reasoning to build risk-adjusted debt repayment strategies, automatically reserve a dynamic emergency buffer *before* allocating debt surplus, and auto-infer natural language expenses.
 
 ## 🔑 Live Evaluator Demo Account
+- **Live Deployed App URL**: [https://smart-rupee.vercel.app/](https://smart-rupee.vercel.app/)
 - **Instant Demo Login**: Click **"Instant Login as Ramesh (Zomato Rider)"** in the app login window.
 - **Email**: `ramesh.demo@smartrupee.in`
 - **Password**: `DemoPassword123!`

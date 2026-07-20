@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     jwt_access_token_expire_minutes: int = 60 * 24 * 7  # 7 days
     env: str = "development"
     port: int = 8000
+    docs_url: str | None = "/docs"
+    redoc_url: str | None = "/redoc"
 
     # Config-Driven Expense Tracking Settings
     currency_symbol: str = "₹"

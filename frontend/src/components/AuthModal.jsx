@@ -13,14 +13,26 @@ export default function AuthModal({ isOpen, onClose, onLogin, onDemoLogin, onReg
 
   if (!isOpen) return null;
 
+  const handleFillDemo = () => {
+    setMode('login');
+    setEmail('ramesh.demo@smartrupee.in');
+    setPassword('DemoPassword123!');
+    toast.info('Prefilled Ramesh (Zomato Rider) credentials!');
+  };
+
   const handleDemoClick = async () => {
+    setMode('login');
+    setEmail('ramesh.demo@smartrupee.in');
+    setPassword('DemoPassword123!');
     setLoading(true);
     try {
       if (onDemoLogin) {
         await onDemoLogin();
-        toast.success('Logged in as Ramesh Kumar (Zomato Rider)!');
-        onClose();
+      } else {
+        await onLogin({ email: 'ramesh.demo@smartrupee.in', password: 'DemoPassword123!' });
       }
+      toast.success('Logged in as Ramesh Kumar (Zomato Rider)!');
+      onClose();
     } catch (err) {
       toast.error('Demo login failed');
     } finally {
@@ -114,14 +126,24 @@ export default function AuthModal({ isOpen, onClose, onLogin, onDemoLogin, onReg
           <p className="text-[11px] text-slate-600 leading-snug">
             Sign in as <strong>Ramesh Kumar (Zomato Rider)</strong> to test with pre-populated history & expenses.
           </p>
-          <button
-            type="button"
-            onClick={handleDemoClick}
-            disabled={loading}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold py-2 px-3 rounded-lg text-xs shadow-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
-          >
-            <span>Instant Login as Ramesh (Zomato Rider)</span>
-          </button>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={handleDemoClick}
+              disabled={loading}
+              className="flex-1 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold py-2 px-3 rounded-lg text-xs shadow-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
+            >
+              <span>Instant Demo Login</span>
+            </button>
+            <button
+              type="button"
+              onClick={handleFillDemo}
+              className="bg-white hover:bg-emerald-100/60 text-emerald-800 border border-emerald-300 font-bold py-2 px-3 rounded-lg text-xs transition-all cursor-pointer"
+              title="Prefill input fields with Ramesh's credentials"
+            >
+              Auto-Fill Fields
+            </button>
+          </div>
         </div>
 
         {/* Form */}

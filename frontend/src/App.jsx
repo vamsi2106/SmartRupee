@@ -14,11 +14,17 @@ export default function App() {
   const [mode, setMode] = useState('landing'); // 'landing' (public marketing) or 'app' (private workspace)
   const [activeTab, setActiveTab] = useState('advisory'); // 'advisory', 'expenses', 'history'
   const [isAuthOpen, setIsAuthOpen] = useState(false);
-  const { user, login, register, logout } = useAuth();
+  const { user, login, loginDemo, register, logout } = useAuth();
 
   // Custom login/register wrappers that switch mode to 'app' automatically upon authentication
   const handleLogin = async (credentials) => {
     const res = await login(credentials);
+    setMode('app');
+    return res;
+  };
+
+  const handleDemoLogin = async () => {
+    const res = await loginDemo();
     setMode('app');
     return res;
   };
@@ -124,6 +130,7 @@ export default function App() {
         isOpen={isAuthOpen}
         onClose={() => setIsAuthOpen(false)}
         onLogin={handleLogin}
+        onDemoLogin={handleDemoLogin}
         onRegister={handleRegister}
       />
     </div>

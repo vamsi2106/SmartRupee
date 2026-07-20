@@ -2,6 +2,9 @@
 
 A comprehensive, single-source guide covering the **SmartRupee Product Vision, Architectural Design, 3-Stage Agentic AI Pipeline**, and complete **REST API Reference**.
 
+## Live Production Deployment
+- **Frontend App URL**: [https://smart-rupee.vercel.app/](https://smart-rupee.vercel.app/)
+
 ---
 
 ## Table of Contents
