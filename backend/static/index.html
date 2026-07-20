@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartRupee — Agentic Debt Advisory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-emerald-500/20">
+          ₹
+        </div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight">SmartRupee</h1>
+          <p class="text-xs text-slate-400">Agentic Debt Advisory for Gig Economy</p>
+        </div>
+      </div>
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        3-Stage Agentic Pipeline
+      </span>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- Left Column: Inputs Form -->
+    <div class="lg:col-span-5 space-y-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+          <span>📊</span> Enter Financial Details
+        </h2>
+
+        <form id="analyzeForm" class="space-y-5">
+          <!-- Income Entries -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+              Recent Income Amounts (comma separated ₹)
+            </label>
+            <input type="text" id="incomeEntries" value="12000, 18000, 9000, 22000" 
+              class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition"
+              placeholder="e.g. 15000, 12000, 18000">
+            <p class="text-xs text-slate-500 mt-1">Used to compute income volatility & average</p>
+          </div>
+
+          <!-- Monthly Expenses -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+              Essential Monthly Expenses (₹)
+            </label>
+            <input type="number" id="monthlyExpenses" value="14000" 
+              class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition"
+              placeholder="e.g. 14000">
+          </div>
+
+          <!-- Debts List -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">
+                Current Debts
+              </label>
+              <button type="button" id="addDebtBtn" class="text-xs text-emerald-400 hover:text-emerald-300 font-medium">
+                + Add Debt
+              </button>
+            </div>
+            
+            <div id="debtsContainer" class="space-y-3">
+              <!-- Debt Item 1 -->
+              <div class="debt-row bg-slate-950 p-3 rounded-xl border border-slate-800 grid grid-cols-12 gap-2">
+                <input type="text" placeholder="Debt Name" value="Credit Card" class="col-span-5 bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-200 debt-name">
+                <input type="number" placeholder="Amount ₹" value="25000" class="col-span-4 bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-200 debt-amount">
+                <input type="number" placeholder="Rate %" value="24" class="col-span-3 bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-200 debt-rate">
+              </div>
+              <!-- Debt Item 2 -->
+              <div class="debt-row bg-slate-950 p-3 rounded-xl border border-slate-800 grid grid-cols-12 gap-2">
+                <input type="text" placeholder="Debt Name" value="Friend Loan" class="col-span-5 bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-200 debt-name">
+                <input type="number" placeholder="Amount ₹" value="8000" class="col-span-4 bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-200 debt-amount">
+                <input type="number" placeholder="Rate %" value="0" class="col-span-3 bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-200 debt-rate">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" id="submitBtn" 
+            class="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-emerald-500/20 transition flex items-center justify-center gap-2">
+            <span>🚀 Run 3-Stage Analysis</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Right Column: Results Display -->
+    <div class="lg:col-span-7 space-y-6">
+      <!-- Welcome Card -->
+      <div id="placeholderState" class="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-10 text-center space-y-4">
+        <div class="w-16 h-16 rounded-2xl bg-slate-800 text-slate-400 flex items-center justify-center mx-auto text-2xl">
+          💡
+        </div>
+        <h3 class="text-slate-300 font-semibold text-lg">Ready for Analysis</h3>
+        <p class="text-slate-500 text-sm max-w-md mx-auto">
+          Fill in your income history and debts on the left, then click "Run 3-Stage Analysis" to execute the agentic pipeline.
+        </p>
+      </div>
+
+      <!-- Loading State -->
+      <div id="loadingState" class="hidden bg-slate-900 border border-slate-800 rounded-2xl p-12 text-center space-y-4">
+        <div class="inline-block animate-spin rounded-full h-10 w-10 border-4 border-emerald-500 border-t-transparent"></div>
+        <p class="text-slate-300 font-medium text-sm">Executing 3-stage agentic workflow...</p>
+        <p class="text-xs text-slate-500">Stage 1 (Compute) ➔ Stage 2 (Strategy Agent) ➔ Stage 3 (Explain Agent)</p>
+      </div>
+
+      <!-- Result Card -->
+      <div id="resultState" class="hidden space-y-6">
+        <!-- Stage 1 Metrics -->
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center">
+            <span class="text-xs font-medium text-slate-400 uppercase">Avg Income</span>
+            <div id="resAvgIncome" class="text-xl font-bold text-white mt-1">₹0</div>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center">
+            <span class="text-xs font-medium text-slate-400 uppercase">Volatility</span>
+            <div id="resVolatility" class="text-xl font-bold text-emerald-400 mt-1">0%</div>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center">
+            <span class="text-xs font-medium text-slate-400 uppercase">Surplus</span>
+            <div id="resSurplus" class="text-xl font-bold text-white mt-1">₹0</div>
+          </div>
+        </div>
+
+        <!-- Strategy Box -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Stage 2 AI Strategy</span>
+            <span id="resStrategyBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30">
+              AVALANCHE
+            </span>
+          </div>
+          <p id="resStrategyReasoning" class="text-sm text-slate-300 leading-relaxed italic">
+            --
+          </p>
+        </div>
+
+        <!-- Ordered Debts -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400">Prioritized Payoff Order</h4>
+          <div id="resOrderedDebts" class="space-y-2">
+            <!-- Dynamic rows -->
+          </div>
+        </div>
+
+        <!-- Action Plan -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400">Stage 3 Action Plan</h4>
+          <div id="resActionPlan" class="space-y-3">
+            <!-- Dynamic steps -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('addDebtBtn').addEventListener('click', () => {
+      const container = document.getElementById('debtsContainer');
+      const row = document.createElement('div');
+      row.className = 'debt-row bg-slate-950 p-3 rounded-xl border border-slate-800 grid grid-cols-12 gap-2';
+      row.innerHTML = `
+        <input type="text" placeholder="Debt Name" class="col-span-5 bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-200 debt-name">
+        <input type="number" placeholder="Amount ₹" class="col-span-4 bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-200 debt-amount">
+        <input type="number" placeholder="Rate %" class="col-span-3 bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-slate-200 debt-rate">
+      `;
+      container.appendChild(row);
+    });
+
+    document.getElementById('analyzeForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const incomeStr = document.getElementById('incomeEntries').value;
+      const incomes = incomeStr.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
+      const monthlyExpenses = parseFloat(document.getElementById('monthlyExpenses').value) || 0;
+
+      const debtRows = document.querySelectorAll('.debt-row');
+      const debts = [];
+      debtRows.forEach(row => {
+        const name = row.querySelector('.debt-name').value;
+        const amount = parseFloat(row.querySelector('.debt-amount').value);
+        const rate = parseFloat(row.querySelector('.debt-rate').value);
+        if (name && !isNaN(amount) && amount > 0) {
+          debts.push({ name, amount, rate: isNaN(rate) ? 0 : rate });
+        }
+      });
+
+      if (incomes.length === 0 || debts.length === 0) {
+        alert('Please enter at least one income entry and one debt.');
+        return;
+      }
+
+      document.getElementById('placeholderState').classList.add('hidden');
+      document.getElementById('resultState').classList.add('hidden');
+      document.getElementById('loadingState').classList.remove('hidden');
+
+      try {
+        const res = await fetch('/api/analyze', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            income_entries: incomes,
+            monthly_expenses: monthlyExpenses,
+            debts: debts
+          })
+        });
+
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.detail || 'Analysis failed');
+        }
+
+        const data = await res.json();
+
+        // Render metrics
+        document.getElementById('resAvgIncome').textContent = `₹${data.avg_income.toLocaleString('en-IN')}`;
+        document.getElementById('resVolatility').textContent = `${data.volatility_pct}%`;
+        document.getElementById('resSurplus').textContent = `₹${data.surplus.toLocaleString('en-IN')}`;
+
+        // Render strategy
+        document.getElementById('resStrategyBadge').textContent = data.chosen_strategy;
+        document.getElementById('resStrategyReasoning').textContent = `"${data.strategy_reasoning}"`;
+
+        // Render debts
+        const debtsContainer = document.getElementById('resOrderedDebts');
+        debtsContainer.innerHTML = '';
+        data.ordered_debts.forEach(d => {
+          const div = document.createElement('div');
+          div.className = 'flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs';
+          div.innerHTML = `
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-xs border border-emerald-500/30">
+                #${d.payoff_order}
+              </span>
+              <span class="font-medium text-slate-200">${d.name}</span>
+            </div>
+            <div class="text-right">
+              <div class="font-bold text-white">₹${d.amount.toLocaleString('en-IN')}</div>
+              <div class="text-slate-500 text-[10px]">${d.rate}% interest</div>
+            </div>
+          `;
+          debtsContainer.appendChild(div);
+        });
+
+        // Render plan
+        const planContainer = document.getElementById('resActionPlan');
+        planContainer.innerHTML = '';
+        data.action_plan.forEach(step => {
+          const p = document.createElement('p');
+          p.className = 'text-xs text-slate-300 leading-relaxed bg-slate-950 p-3 rounded-xl border border-slate-800/60';
+          p.textContent = step;
+          planContainer.appendChild(p);
+        });
+
+        document.getElementById('loadingState').classList.add('hidden');
+        document.getElementById('resultState').classList.remove('hidden');
+
+      } catch (err) {
+        document.getElementById('loadingState').classList.add('hidden');
+        document.getElementById('placeholderState').classList.remove('hidden');
+        alert(`Error: ${err.message}`);
+      }
+    });
+  </script>
+</body>
+</html>
