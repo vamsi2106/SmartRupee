@@ -1,51 +1,84 @@
-# 💰 SmartRupee — Agentic Volatility-Aware Debt Advisory Platform for Indian Gig Workers
+<div align="center">
 
-[![NxtWave Hackathon 2026](https://img.shields.io/badge/Hackathon-Idea2Impact_2026-brightgreen)](https://forms.ccbp.in/acad-online-hackathon-project-submission)
-[![Theme](https://img.shields.io/badge/Theme_1-Sustainability_%26_Social_Impact-blue)](#-theme--problem-alignment)
-[![Python](https://img.shields.io/badge/Backend-FastAPI_3.11+-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/Frontend-React_18_Vite-61DAFB?logo=react)](https://reactjs.org/)
-[![Google Gemini](https://img.shields.io/badge/AI_Model-Google_Gemini_1.5_/_2.0-4285F4?logo=google)](https://aistudio.google.com/)
-[![MongoDB](https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?logo=mongodb)](https://www.mongodb.com/cloud/atlas)
+  <br />
+  <div style="background: linear-gradient(135deg, #059669 0%, #0d9488 100%); padding: 20px; border-radius: 20px; color: white;">
+    <h1 style="font-size: 2.5rem; font-weight: 800; margin: 0;">💰 SmartRupee</h1>
+    <h3 style="font-weight: 500; opacity: 0.95; margin-top: 5px;">Agentic Volatility-Aware Debt Advisory Platform for Indian Gig Workers</h3>
+  </div>
 
-> **SmartRupee** is a production-grade, full-stack AI financial platform built for **50+ million Indian gig economy workers** (delivery partners for Swiggy/Zomato/Zepto, rideshare drivers for Uber/Ola, and micro-freelancers). It replaces static salary assumptions with **income volatility mathematical risk modeling ($\text{CV}\%$)** and a **3-stage agentic pipeline** powered by Google Gemini AI.
+  <br />
+
+  <p>
+    <b>Financial Inclusion & Informal Economy Debt Protection for 50M+ Delivery Partners, Drivers & Freelancers</b>
+  </p>
+
+  <p>
+    <a href="https://forms.ccbp.in/acad-online-hackathon-project-submission"><img src="https://img.shields.io/badge/Hackathon-NxtWave_Idea2Impact_2026-brightgreen?style=for-the-badge&logo=google" alt="Hackathon"></a>
+    <a href="#-theme--problem-alignment"><img src="https://img.shields.io/badge/Theme-1._Sustainability_%26_Social_Impact-blue?style=for-the-badge" alt="Theme"></a>
+    <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/Backend-FastAPI_3.11+-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"></a>
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/Frontend-React_18_Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"></a>
+    <a href="https://aistudio.google.com/"><img src="https://img.shields.io/badge/AI_Engine-Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini"></a>
+    <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"></a>
+  </p>
+
+  <p>
+    <a href="#-evaluator-demo-account"><b>🔑 Demo Credentials</b></a> &nbsp;•&nbsp;
+    <a href="PROBLEM_STATEMENT_AND_PITCH.md"><b>📄 Pitch Document</b></a> &nbsp;•&nbsp;
+    <a href="SUBMISSION_KIT.md"><b>🏆 Submission Kit</b></a> &nbsp;•&nbsp;
+    <a href="SMARTRUPEE_PRODUCT_AND_API_DOCS.md"><b>📘 API Reference</b></a>
+  </p>
+
+</div>
 
 ---
 
-## 📌 Submission Quick Links
-
-- 📄 **[Problem Statement & Pitch Document](PROBLEM_STATEMENT_AND_PITCH.md)**
-- 🏆 **[Hackathon Submission Form Guide & Pre-filled Responses](SUBMISSION_KIT.md)**
-- 📘 **[Complete Product & API Documentation](SMARTRUPEE_PRODUCT_AND_API_DOCS.md)**
-
+<a name="-evaluator-demo-account"></a>
 ## 🔑 Evaluator Demo Account & Credentials
 
-To test the application instantly without filling out registration forms, use the pre-configured Demo Account:
+To test the application immediately without signing up for a new account:
 
-| Credential | Value |
-| :--- | :--- |
-| **Email** | `ramesh.demo@smartrupee.in` |
-| **Password** | `DemoPassword123!` |
-| **User Profile** | **Ramesh Kumar** (Zomato Rider, Bengaluru) |
-| **Pre-populated Data** | Pre-loaded with 3-Stage Payoff Strategy & 4 Expense Logs |
+<table width="100%">
+  <tr>
+    <td width="30%"><b>Demo Email</b></td>
+    <td><code>ramesh.demo@smartrupee.in</code></td>
+  </tr>
+  <tr>
+    <td><b>Demo Password</b></td>
+    <td><code>DemoPassword123!</code></td>
+  </tr>
+  <tr>
+    <td><b>User Profile</b></td>
+    <td><b>Ramesh Kumar</b> (Zomato Delivery Partner, Bengaluru)</td>
+  </tr>
+  <tr>
+    <td><b>Pre-Populated Data</b></td>
+    <td>Pre-loaded with 3-Stage Payoff Strategy & 4 Expense Logs</td>
+  </tr>
+  <tr>
+    <td><b>1-Click Login</b></td>
+    <td>Click <b>"Instant Login as Ramesh (Zomato Rider)"</b> in the app login window</td>
+  </tr>
+</table>
 
-> 🛡️ **AI Usage Quota Protection**: To protect Gemini API credit costs during evaluation, each user account is allowed **up to 5 free AI analysis runs**. The system enforces an HTTP 429 rate limit if a user exceeds 5 analysis runs.
+> [!IMPORTANT]
+> **AI Usage Quota Protection**: To protect Gemini API credit costs during evaluation, each user account is allowed **up to 5 free AI analysis runs**. The backend enforces an `HTTP 429` rate limit if an account exceeds 5 runs.
 
 ---
 
 ## 🎯 Theme & Problem Alignment
 
-- **Hackathon Theme**: **Theme 1 — Sustainability & Social Impact**
-- **Domain Focus**: Financial Inclusion, Social Welfare & Informal Economy Protection
-- **The Core Problem**: 
-  Over 50M gig workers in India experience weekly income fluctuations of **30% to 60%**. Generic budgeting tools advise users to throw 100% of excess cash at debt payoff. When a lean income week hits, having zero cash reserves forces workers into predatory informal debt (local moneylenders charging 60–120% APR). SmartRupee prevents this debt relapse cycle.
+* **Hackathon Theme**: **Theme 1 — Sustainability & Social Impact**
+* **Domain Focus**: Financial Inclusion, Informal Economy Protection & Micro-Welfare
+* **The Core Problem**:
+  Over 50M gig workers in India experience weekly income fluctuations of **30% to 60%**. Standard budgeting apps advise users to throw 100% of excess cash at debt payoff. When a lean income week hits, having zero cash reserves forces workers into predatory informal debt (local moneylenders charging 60–120% APR). SmartRupee prevents this debt relapse cycle.
 
 ---
 
-## 🌟 Architectural Differentiator: 3-Stage Pipeline
+## ⚡ The 3-Stage Agentic Debt Engine Architecture
 
-Generic budgeting applications provide static advice that ignores income volatility. SmartRupee implements a strict 3-stage pipeline separating **pure deterministic math** from **AI strategic decisions**:
+SmartRupee decouples **pure deterministic financial compute** from **AI natural language strategy selection**:
 
-```
+<pre align="center">
  ┌────────────────────────────────────────────────────────┐
  │   Stage 1: Pure Deterministic Compute (Python Engine)  │
  │   - Calculates Mean Earnings & Volatility (% CV)       │
@@ -56,41 +89,66 @@ Generic budgeting applications provide static advice that ignores income volatil
  ┌────────────────────────────────────────────────────────┐
  │   Stage 2: Strategy Agent (Google Gemini AI)           │
  │   - Evaluates Volatility Risk Level (LOW, MED, HIGH)   │
- │   - High Volatility (>30% CV) ──► SNOWBALL (Quick Wins)│
- │   - Low Volatility (<30% CV)  ──► AVALANCHE (Min Interest)
+ │   - High Volatility (&gt;30% CV) ──► SNOWBALL (Quick Wins)│
+ │   - Low Volatility (&lt;30% CV)  ──► AVALANCHE (Min Interest)
  └───────────────────────────┬────────────────────────────┘
                              │
                              ▼
  ┌────────────────────────────────────────────────────────┐
  │   Stage 3: Explain Agent (Google Gemini AI)            │
- │   - Automatically Reserves Volatility Emergency Buffer  │
+ │   - Automatically Reserves Volatility Emergency Buffer │
  │   - Empathetic Plain-Language Actionable Steps         │
  │   - Eliminates Financial Jargon & Jargon Confusion     │
  └───────────────────────────┬────────────────────────────┘
                              │
                              ▼
          [MongoDB Atlas Persistence & Response API]
-```
+</pre>
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features & Capabilities
 
-1. **Volatility Metric Calculation ($\text{CV}\%$)**: Calculates standard deviation over mean income to measure true volatility risk rather than naive average earnings.
-2. **Rainy-Day Emergency Buffer Protection**: Dynamic buffer calculation (15–25% of cash surplus) reserved *before* debt payoff allocation, protecting workers from relapse.
-3. **Risk-Tailored Strategy Choice**:
-   - **Debt Snowball**: Clears small loans first to rapidly eliminate monthly obligations and build psychological momentum.
-   - **Debt Avalanche**: Focuses surplus on highest-interest debts when income is stable.
-4. **Informal & Formal Debt Co-Existence**: Seamlessly manages micro-debts (friends, moneylenders) alongside credit cards and bank loans.
-5. **AI Natural Language Expense Inferencing**: Automatically parses plain-text expenses (*"Petrol HP Bunk ₹350"*) into categories with real-time budget warnings.
-6. **JWT Auth & Historical Analysis Timeline**: Secure user login with full analysis history stored in MongoDB Atlas.
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <h3>📈 Volatility Risk Modeling ($\text{CV}\%$)</h3>
+      Calculates coefficient of variation ($\frac{\sigma}{\mu}$) across weekly income payouts to measure true earnings unpredictability.
+    </td>
+    <td width="50%">
+      <h3>☔ Rainy-Day Emergency Reserve</h3>
+      Locks a cash safety buffer <i>before</i> allocating debt surplus, protecting gig workers from relapsing into informal loans.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>⚡ Adaptive Strategy Engine</h3>
+      Dynamically selects <b>Snowball</b> (quick balance wins) for high-stress informal debts or <b>Avalanche</b> (interest reduction) for stable periods.
+    </td>
+    <td>
+      <h3>🏷️ Smart Expense Auto-Tagging</h3>
+      Auto-infers expense categories from plain text (e.g., <i>"Petrol HP Bunk ₹500"</i> ➔ <b>Fuel</b>) with threshold warnings.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>📱 Mobile-First 4-Step Wizard</h3>
+      Hyper-compact native mobile UI built with Framer Motion slide transitions and 1-click Ramesh demo scenario.
+    </td>
+    <td>
+      <h3>🛡️ Grounded Advice Guardrails</h3>
+      Zero-hallucination prompt architecture bound strictly to Stage 1 math calculations.
+    </td>
+  </tr>
+</table>
 
 ---
 
 ## 📁 Repository Structure
 
-```
+```text
 nxtwave-hackthon/
+├── README.md                          # Main Repository Overview & Setup Guide
 ├── PROBLEM_STATEMENT_AND_PITCH.md     # Official Hackathon Pitch Document
 ├── SUBMISSION_KIT.md                  # Pre-filled official submission form responses
 ├── SMARTRUPEE_PRODUCT_AND_API_DOCS.md # Product Overview & API Reference
@@ -104,110 +162,79 @@ nxtwave-hackthon/
 │   │   ├── agents/                    # Stage 2 Strategy Agent & Stage 3 Explain Agent
 │   │   └── graph/                     # LangGraph 3-Stage Pipeline Orchestrator
 │   ├── tests/                         # Pytest unit tests (Auth, Expenses, Finance Engine)
-│   ├── Dockerfile                     # Deployment container setup
-│   ├── requirements.txt               # Backend dependencies
-│   └── startup.sh                     # Azure/Cloud startup script
-├── frontend/                          # React + Vite Frontend
-│   ├── src/
-│   │   ├── components/                # UI Components (AdvisoryView, ExpenseView, HistoryView, LandingPage)
-│   │   ├── services/                  # Axios API Service Layer
-│   │   └── hooks/                     # Custom React Hooks
-│   ├── package.json                   # Node.js dependencies
-│   └── vite.config.js                 # Vite bundler configuration
-└── .gitignore                         # Master root git ignore
+│   └── requirements.txt               # Backend dependencies
+└── frontend/                          # React + Vite Frontend
+    ├── src/
+    │   ├── components/                # UI Components (AdvisoryView, ExpenseView, HistoryView, LandingPage)
+    │   ├── services/                  # Axios API Service Layer
+    │   └── hooks/                     # Custom React Hooks
+    └── vite.config.js                 # Vite bundler configuration
 ```
 
 ---
 
-## 🚀 Quickstart (Local Development)
+## 🚀 Quickstart & Setup Guide
 
-### 1. Prerequisites
-- **Python 3.11+**
-- **Node.js 18+ & npm**
-- **Google Gemini API Key** ([Get Key at AI Studio](https://aistudio.google.com/))
-- **MongoDB Atlas Connection URI** ([Get Free Cluster](https://www.mongodb.com/cloud/atlas))
+<details>
+<summary><b>1. Prerequisites</b></summary>
+<br />
+<ul>
+  <li><b>Python 3.11+</b></li>
+  <li><b>Node.js 18+ & npm</b></li>
+  <li><b>Google Gemini API Key</b> (<a href="https://aistudio.google.com/">Get API Key</a>)</li>
+  <li><b>MongoDB Atlas Connection URI</b> (<a href="https://www.mongodb.com/cloud/atlas">Get Free Database</a>)</li>
+</ul>
+</details>
 
----
+<details>
+<summary><b>2. Backend Setup (FastAPI)</b></summary>
+<br />
+<pre><code>cd backend
+python3 -m venv venv
+source venv/bin/activate    # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
 
-### 2. Backend Setup
-1. Open terminal in the `backend/` directory:
-   ```bash
-   cd backend
-   ```
-2. Create virtual environment & install dependencies:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate    # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-3. Create a `.env` file in `backend/`:
-   ```env
-   GEMINI_API_KEY=your_google_gemini_api_key
-   MONGO_URI=mongodb+srv://username:password@cluster0.xxx.mongodb.net/smartrupee?retryWrites=true&w=majority
-   ENV=development
-   PORT=8000
-   ```
-4. Run Unit Tests (100% passing):
-   ```bash
-   PYTHONPATH=. pytest
-   ```
-5. Start FastAPI Server:
-   ```bash
-   uvicorn app.main:app --reload --port 8000
-   ```
-   - Server running at: `http://localhost:8000`
-   - Interactive Swagger API Docs: `http://localhost:8000/docs`
+# Create .env file
+cp .env.example .env
 
----
+# Start Server
+uvicorn app.main:app --reload --port 8000
+</code></pre>
+<ul>
+  <li>Backend API: <code>http://localhost:8000</code></li>
+  <li>Swagger Docs: <code>http://localhost:8000/docs</code></li>
+</ul>
+</details>
 
-### 3. Frontend Setup
-1. Open a new terminal in the `frontend/` directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies & start Vite dev server:
-   ```bash
-   npm install
-   npm run dev
-   ```
-3. Open browser at: `http://localhost:5173`
+<details>
+<summary><b>3. Frontend Setup (React + Vite)</b></summary>
+<br />
+<pre><code>cd frontend
+npm install
+npm run dev
+</code></pre>
+<ul>
+  <li>Web App: <code>http://localhost:5173</code></li>
+</ul>
+</details>
 
 ---
 
 ## 🧪 Verification & Testing
 
-Both frontend and backend are fully tested:
+Both frontend and backend include automated test suites:
 
 ```bash
-# Backend pytest suite (15/15 tests passing)
+# Run Backend Pytest Suite (15/15 Tests Passing)
 cd backend && PYTHONPATH=. ./venv/bin/pytest
 
-# Frontend production bundle test
+# Test Frontend Production Build
 cd frontend && npm run build
 ```
 
 ---
 
-## ☁️ Deployment Guide
-
-### Option 1: Deploy on Render + Vercel (Recommended - Free Tier)
-- **Backend (Render)**:
-  - Create new Web Service from GitHub repo.
-  - Root Directory: `backend`
-  - Build Command: `pip install -r requirements.txt`
-  - Start Command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-  - Set Environment Variables: `GEMINI_API_KEY`, `MONGO_URI`.
-
-- **Frontend (Vercel)**:
-  - Import repository on Vercel.
-  - Root Directory: `frontend`
-  - Build Command: `npm run build`
-  - Output Directory: `dist`
-  - Set Environment Variable: `VITE_API_BASE_URL` = Render backend URL.
-
----
-
-## 📜 License & Acknowledgments
-
-Built with ❤️ for **NxtWave Idea2Impact Online Hackathon 2026**.  
-Empowering Indian gig economy workers through ethical, volatility-aware AI financial intelligence.
+<div align="center">
+  <p>Built with ❤️ for <b>NxtWave Idea2Impact Online Hackathon 2026</b></p>
+  <p><b>SmartRupee</b> — Empowering Indian gig economy workers through ethical AI financial intelligence.</p>
+</div>
