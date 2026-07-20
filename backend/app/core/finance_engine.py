@@ -1,5 +1,5 @@
 import statistics
-from typing import List
+from typing import List, Optional
 from app.schemas.analyze import Debt, DebtStrategyItem
 from app.core.exceptions import InvalidFinancialDataError
 
